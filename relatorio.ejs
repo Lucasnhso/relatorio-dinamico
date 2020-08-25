@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><%=cliente%></br>
+    <br>Relatório de <%=titulo%></br>
+    
+    <table style="width:100%">
+        <tr>
+            <% for(let item of colunas){%>
+                <th><%= item%></th>
+            <% } %>
+        </tr>
+        <% for (let i = 0; i<conteudo[0].length ; i++){%>
+            <tr>
+                <%for(let j = 0; j<conteudo.length; j++){%>
+                    <td><%=conteudo[j][i]%></td>
+                <% } %> 
+            </tr>
+        <%} %>
+    </table>
+</body>
+<style>
+    body{
+        font-family: arial, sans-serif;
+    }
+    table {
+        
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+    text-align: left;
+    padding: 8px;
+    }
+
+    td, th{
+        border-bottom: 1px solid #dddddd
+    }
+
+    
+</style>
+</html>
