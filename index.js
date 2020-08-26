@@ -18,9 +18,9 @@ let conteudo = [["Condor", "Big", "Mufatto"],
                 ["Curitiba", "Penha", "Sao Paulo"],
                 ["PR", "SC", "SP"],
                 ["Vitor", "Pedro", "Luan"]]
+let dataAtual = "26/08/2020"//A idéia é vir do back-end
 
-
-ejs.renderFile("./relatorio.ejs",{colunas: colunas, cliente: cliente, titulo: titulo, conteudo: conteudo}, (err, html) =>{
+ejs.renderFile("./relatorio.ejs",{colunas: colunas, cliente: cliente, titulo: titulo, conteudo: conteudo, dataAtual:dataAtual}, (err, html) =>{
     if(err){
         console.log(err)
     }
